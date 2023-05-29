@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#fff0f5;
+    --header:#fff;
+    --border:.1rem solid rgba(255,255,255,.3);
+
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .1s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+.heading{
+    text-align: center;
+    color: #13131a;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.header .logo {
+    width: 100px;
+    height: 70px;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius:5rem ;
+}
+body{
+    background: var(--bg);
+}
+section{
+    padding: 5.5rem;
+}
+.header{
+    background: var(--header);
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 2rem 8%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+}
+.header .navbar {
+    justify-content: center;
+    text-align: center;
+}
+.header .navbar a{
+    margin:0 2rem;
+    font-size: 2rem;
+    color: var(--black);
+    text-decoration: none;
+
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .2rem solid var(--main-color);
+    padding-bottom: .2.5rem;
+}
+
+.header .icons div{
+    color: #000;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color:var(--main-color) ;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(assets/background.jpg);
+    background-size:cover ;
+    background-position: center;
+
+}
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.home .content p{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color:  #fff0f5;
+    text-transform: none;
+}
+
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 3rem;
+    height: 70vh;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 90%; 
+}
+
+.about .row .content {
+    flex: 2 2 45rem;
+    padding: 2rem;
+    margin-left: 20px;
+}
+
+.about .row .content h3 {
+    font-size: 4rem;
+    color: #fff0f5;
+    line-height: 3;
+}
+
+.about .row .content p {
+    font-size: 2.5rem;
+    color: #ccc;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+    text-transform: none;
+}
+#menu-btn{
+    display: none;
+}
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от друга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 960px; /*максимальнная длинна*/
+    margin-bottom: 2rem
+}
+
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.row input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -23% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+    
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 20% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.contact-page{
+    display: inline-block;
+    box-sizing: border-box;
+    background-size: cover;
+    min-height: 100hv;
+    width: 70%;
+    max-width: 700px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.contact-info .item{
+    margin-bottom: 24px;
+    font-size: 16px;
+
+}
+.icon{
+    width: 60px;
+    height: 60px; 
+    line-height: 60px;
+    background-color: #18a3dd;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.contact-form{
+    flex: 1 1 45rem;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.textb{
+    font-size: 16px;
+    width: calc(50%-20px);
+    height: 50px;
+    padding: 12px;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 30px;
+    text-transform: none;
+}
+textarea{
+    font-size: 16px;
+    width: 100%;
+    min-height: 200px;
+    max-height:400px;
+    resize: vertical;
+    padding: 12px;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+.btn{
+    width: 120px;
+    height: 40px;
+    margin-left:auto;
+    background-color: #18a3dd;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #18a3dd;
+    transition: .3s linear;
+}
+.contact-form .alert {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.location .row{
+
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.location .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+    height: 90vh;
+}
+.location .row .info{
+    flex: 1 1 45rem;
+    padding: 7rem;
+}
+.location .row .info h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: green;
+    margin-bottom: 70px;
+    text-align: center;
+
+}
+.location .row .info p{
+    font-size: 25px;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+
+
+@media (min-width: 768px) {
+    .about .row {
+        flex-direction: row-reverse; /* Изменяем направление гибкого контейнера на обратное */
+    }
+
+    .about .row .image {
+        order: 2; /* Меняем порядок элемента .image на второй */
+    }
+
+    .about .row .content {
+        order: 1; /* Меняем порядок элемента .content на первый */
+    }
+}
+
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 62.5%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+
+    }
+
+}
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+.footer .share{
+    padding: 1rem 0;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+    text-decoration: none;
+
+}   
+.footer .share a:hover{
+    background-color: var(--main-color);
+
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+    text-decoration: none;
+}
+.footer .links a:hover{
+    background-color: var(--main-color);
+}
+.footer .credit{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}

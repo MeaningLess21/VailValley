@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src = "assets/logo.png" class = 'logo' alt="">
+
+        </a>
+        <nav class="navbar">
+            <a href="#home">Vail Valley</a>
+            <a href="#about">О нас</a>
+            <a href="#location">Расположение</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id ="menu-btn"></div>
+        </div>
+    </header>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Продажа земельных участков</h3>
+        <p>Уютный уголок для загородной жизни. Микрорайон находится в черте города в Индустриальном районе Казани.</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h1 class="heading"><span>O</span> нас </h1>
+    <div class="row">
+        <input checked type="radio" name="respond" id="desktop">
+        <article id="slider">
+            <input checked type="radio" name="slider" id="switch1">
+            <input type="radio" name="slider" id="switch2">
+            <input type="radio" name="slider" id="switch3">
+        <div id="slides">
+            <div id="overflow">
+                <div class="image">
+                    <article><img src="assets/dom1.jpeg"></article>
+                    <article><img src="assets/dom2.jpeg"></article>
+                    <article><img src="assets/dom3.jpeg "></article>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="switch1"></label>
+            <label for="switch2"></label>
+            <label for="switch3"></label>
+        </div>
+        <div id="active">
+            <label for="switch1"></label>
+            <label for="switch2"></label>
+            <label for="switch3"></label>
+        </div>
+    </article>
+        <div class="content">
+            <h3>Что мы предлагаем</h3>
+            <p>Закрытая территория</p>
+            <p>Посёлок со всех сторон обнесён забором</p>
+            <p>При въезде КПП со шлагбаумом</p>
+            <p>Главной нашей особенностью является то, что наши Клиенты получают не просто земельный участок в поле или поселке. Они получают место проживания, позволяющее вести здоровый образ жизни и получать удовольствие.</p>
+        </div>
+    </div>
+</section> 
+<section class= "location" id ="location">
+    <h1 class="heading"><span>Где мы</span> находится </h1>
+    <div class="row"> 
+        <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4478.336391196553!2d48.798937900497585!3d55.85974816374923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415957275a3f4001%3A0xbc4fb0e14a609ada!2z0LrRgtC2L9C_LiDQl9Cw0LPQvtGA0L7QtNC90YvQuSDQmtC70YPQsSAo0JTRg9Cx0YDQvtCy0LrQsCksINCg0LXRgdC_LiDQotCw0YLQsNGA0YHRgtCw0L0sIDQyMjUyNg!5e0!3m2!1sru!2sru!4v1685291410749!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+        <div class="info">
+            <h3>ЗАГОРОДНЫЙ КЛУБ
+                Коттеджный комплекс класса «Бизнес»</h3>
+                <p>Мы рады приветствовать вас и предоставить подробную информацию о том, как легко и удобно добраться до нашего прекрасного места.</p>
+            <p>
+                Наш коттеджный поселок расположен в живописном уголке природы, и для того чтобы добраться до нас, есть несколько доступных вариантов транспорта. 
+                Вы всегда можете обратиться к нашим сотрудникам за дополнительной информацией или помощью в планировании вашего путешествия.
+                Мы надеемся, что эта информация поможет вам спланировать вашу поездку к нам. 
+                
+            </p>
+            <p>Мы с нетерпением ждем вашего приезда и гарантируем, что ваше пребывание в нашем коттеджном поселке будет незабываемым и полным удовольствия!</p>
+        </div>
+    </div>
+</section>
+<section class= "contact" id ="contact">
+    <h1 class="heading"><span>Связаться </span> с нами </h1>
+    <div class="contact-page">
+        <div class="contact-info">
+            <div class="item">
+                <i class="icon fas fa-home"></i>
+                Загороднй клуб Дубравный,Республика Татарстан,Россия 
+            </div>
+            <div class="item">
+                <i class="icon fas fa-phone"></i>
+                +7-(937)-393-84-08
+            </div>
+            <div class="item">
+                <i class="icon fas fa-envelope"></i>
+                123_Cheb@mail.ru
+            </div>
+            <div class="item">
+                <i class="icon fas fa-clock"></i>
+                Пн-Пт 8:00-20:00
+            </div>
+            <form id= "tg"  action="" class="contact-form">
+                <input type="text" name ="name" class="textb" placeholder="Ваше имя">
+                <input type="email" name ="email" class="textb" placeholder="Ваш email">
+                <textarea id = "message" placeholder="Ваше сообщение"></textarea>
+                <div id = "success" class="alert alert-success" role="alert" style="display: none;"> </div>
+                <div id = "warning" class="alert alert-warning" role="alert" style="display: none;"> </div>
+                <input type="submit" class="btn" placeholder="Отправить">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-telegram"></a>
+    </div>
+    <div class="links">
+        <a href="#home">Vail Valley</a>
+        <a href="#about">О нас</a>
+        <a href="#location">Расположение</a>
+        <a href="#contact">Контакты</a>
+    </div>
+    <div class="credit">©2023
+        Федеральная база недвижимости, МЛС для профессионалов рынка, риэлторов и девелоперов.
+        Использование сайта означает согласие с Пользовательским соглашением и Политикой обработки персональных данных.</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
